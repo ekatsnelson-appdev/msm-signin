@@ -21,11 +21,11 @@
           Movie
         </label>
 
-        <input type="text" id="movie_id_box" name="query_movie_id">
+        <%#input type="text" id="movie_id_box" name="query_movie_id"%>
 
-        <select>
+        <select name="query_movie_id">
           <% Movie.all.order(:title).each do |a_movie| %>
-            <option>
+            <option value="<%= a_movie.id %>">
               <%= a_movie.title %>
             </option>
           <% end %>
