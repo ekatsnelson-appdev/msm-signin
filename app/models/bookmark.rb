@@ -12,6 +12,4 @@ class Bookmark < ApplicationRecord
   belongs_to :user
   belongs_to :movie
 
-  has_many :bookmarks
-  has_many :movies, :through => :bookmarks
 end
