@@ -4,6 +4,15 @@
       Movie #<%= @the_movie.id %> details
     </h1>
 
+    <form action="/add_bookmark">
+      User:
+      <input type="hidden" name="the_user_id" value="<%= session.fetch(:user_id) %>">
+
+      Movie:
+      <input type="hidden" name="the_movie_id" value="<%= @the_movie %>">
+      <button>Bookmark this movie!</button>
+    </form>
+
     <div>
       <div>
         <a href="/movies">
